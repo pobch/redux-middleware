@@ -11,7 +11,7 @@ const Root = props => {
   const store = createStore(
     reducers,
     initialState,
-    applyMiddleware(async, stateValidator)
+    applyMiddleware(stateValidator, async)
   )
 
   return <Provider store={store}>{children}</Provider>
